@@ -8,8 +8,8 @@ Prof. Coordonator: Nică Anca-Maria
 ## Mediul de lucru
 
 Codul a fost realizat in limbajul de programare Python(ide = PyCharm), utilizand libraria criptografica PyCryptodome. <br />
-Pentru instalarea celor necesare si evitarea eventualelor erori:
 
+Pentru instalarea celor necesare si evitarea eventualelor erori:
 * Windows PowerShell:
   * Run as administrator
   * Introduceti comanda: Set-ExecutionPolicy Unrestricted
@@ -25,9 +25,11 @@ Astfel se vor evita erorile de instalare a pachetelor Crypto si AES necesare.
 ## Modul de rezolvare a temei
 
 Cerinta problemei: [tema_1_SI .pdf](https://github.com/TudosaEduard/Tema1_SI/files/7379324/tema_1_SI.pdf) <br />
+
 Informatiile teoretice se pot gasi aici:
  * https://profs.info.uaic.ro/~eonica/isec/index.html
  * https://profs.info.uaic.ro/~nica.anca/is.html <br />
+
 Explicatii referitoare la comunicarea intre noduri si rezolvarea cerintei:
  * Nodul Generator:
    * Un nod suplimentar care va genera random cheia initiala si vectorul de initializare (cunoscute de toate nodurile implicate)
