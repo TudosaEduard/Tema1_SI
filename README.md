@@ -22,6 +22,8 @@ Pentru instalarea celor necesare și evitarea eventualelor erori:
 
 Astfel se vor evita erorile de instalare a pachetelor Crypto și AES necesare.
 
+`Rularea, cât si observarea comunicarii se face in PyCharm.`
+
 ## Modul de rezolvare a temei
 
 Cerința problemei: [tema_1_SI .pdf](https://github.com/TudosaEduard/Tema1_SI/files/7379324/tema_1_SI.pdf) <br />
