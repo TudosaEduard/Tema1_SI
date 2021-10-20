@@ -27,7 +27,7 @@ Astfel se vor evita erorile de instalare a pachetelor Crypto si AES necesare.
 Cerinta problemei: [tema_1_SI .pdf](https://github.com/TudosaEduard/Tema1_SI/files/7379324/tema_1_SI.pdf) <br />
 Informatiile teoretice se pot gasi aici:
  * https://profs.info.uaic.ro/~eonica/isec/index.html
- * https://profs.info.uaic.ro/~nica.anca/is.html
+ * https://profs.info.uaic.ro/~nica.anca/is.html <br />
 Explicatii referitoare la comunicarea intre noduri si rezolvarea cerintei:
  * Nodul Generator:
    * Un nod suplimentar care va genera random cheia initiala si vectorul de initializare (cunoscute de toate nodurile implicate)
