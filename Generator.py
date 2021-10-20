@@ -9,6 +9,9 @@ key_length = 128
 K = str.encode(''.join(random.choices(string.ascii_letters + string.digits + string.punctuation, k=key_length // 8)))
 iv = str.encode(''.join(random.choices(string.ascii_letters + string.digits + string.punctuation, k=key_length // 8)))
 
+print("Cheia K generata este :  ", K)
+print("Vectorul de initializare este:  ", iv)
+
 # Oferim cheia si vectorul de initializare generate celor 3 noduri (A, B, MC) prin retea
 
 s = socket.socket()

@@ -37,8 +37,10 @@ def A_B_discussion():
         print("Got conection with node A")
         mesaj = c.recv(1024)
         if mesaj == b"ecb":
+            print("\nTrimitem cheia criptata k1 lui A:  ", ciphertext_k1)
             c.send(ciphertext_k1)
         else:
+            print("\nTrimitem cheia criptata k2 lui A:  ", ciphertext_k2)
             c.send(ciphertext_k2)
         c.close()
 
@@ -47,8 +49,10 @@ def A_B_discussion():
         print("Got conection with node B")
         mesaj = c.recv(1024)
         if mesaj == b"ecb":
+            print("\nTrimitem cheia criptata k1 lui B:  ", ciphertext_k1)
             c.send(ciphertext_k1)
         else:
+            print("\nTrimitem cheia criptata k1 lui B:  ", ciphertext_k1)
             c.send(ciphertext_k2)
         c.close()
 
@@ -84,8 +88,12 @@ def encrypt_k2(k):
 
 
 key_length = 128
+
 K, iv = generator_discussion()
+print("Am preluat valorile generate:  ", K, iv)
+
 k1, k2 = random_key()
+print("\nGeneram cheile k1 si k2:  ", k1 , k2)
 
 ciphertext_k1 = encrypt_k1(k1)
 ciphertext_k2 = encrypt_k2(k2)

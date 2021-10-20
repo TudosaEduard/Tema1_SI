@@ -94,7 +94,7 @@ def encrypt_text_cfb(k):
 # Realizeaza discutia cu nodul B pentru a ii oferi mesajul de decriptat
 
 
-def B_discussion(inp , enc_mesaj):
+def B_discussion(inp, enc_mesaj):
     s = socket.socket()  # Create a socket object
     host = socket.gethostname()  # Get local machine name
     port = 113  # Reserve a port for your service.
@@ -106,6 +106,7 @@ def B_discussion(inp , enc_mesaj):
         print("Got conection with node B")
         c.send(inp.encode())
         print(c.recv(1024).decode())
+        print("\nTrimitem mesajul criptat lui B:  ", enc_mesaj)
         c.send(enc_mesaj)
         c.close()
     s.close()
@@ -118,20 +119,27 @@ def B_discussion(inp , enc_mesaj):
 
 def main():
 
-    print("Spune ce mod de operare doresti(ecb sau cfb):   ")
+    print("\nSpune ce mod de operare doresti(ecb sau cfb):   ")
     inp = input()
     if inp.lower() == "ecb":
         k = MC_discussion(b"ecb")
+        print("\nAm preluat cheia criptata k1:  ", k)
         k = decrypt_key_ecb(k)
+        print("\nAm decriptat cheia k1:  ", k)
         B_discussion(inp.lower(), encrypt_text_ecb(k))
     else:
         k = MC_discussion(b"cfb")
+        print("\nAm preluat cheia criptata k2:  ", k)
         k = decrypt_key_cfb(k)
+        print("\nAm decriptat cheia k2:  ", k)
         B_discussion(inp.lower(), encrypt_text_cfb(k))
 
 
 
 key_length = 128
+
 K, iv = generator_discussion()
+print("Am preluat valorile generate:  ", K, iv)
+
 main()
 

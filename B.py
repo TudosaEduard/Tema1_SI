@@ -117,24 +117,38 @@ def A_discussion(iv):
 
     inp = s.recv(1024)
     k = MC_discussion(inp)
+    print("\nAm preluat cheia criptata k1 sau k2:  ", k)
 
     s.send(b"Comunicarea poate incepe (mesaj primit de la B)")
     enc_mesaj = s.recv(1024)
+    print("\nAm preluat mesajul criptat de A:  ", enc_mesaj)
+
     s.close()
     if inp == b"ecb":
         k = decrypt_key_ecb(k)
+        print("\nAm decriptat cheia k1:  ", k)
+
         file = open("mesaj_decriptat.txt", "w")
         text = decrypt_text_ecb(enc_mesaj, k)
         file.write(text)
+
+        print("\n\nAm decriptat textul primit:\n")
         print(text)
     else:
         k = decrypt_key_cfb(k)
+        print("\nAm decriptat cheia k2:  ", k)
+
         file = open("mesaj_decriptat.txt", "w")
         text = decrypt_text_cfb(enc_mesaj, k, iv)
         file.write(text)
+
+        print("\n\nAm decriptat textul primit:\n")
         print(text)
 
 
 key_length = 128
+
 K, iv = generator_discussion()
+print("Am preluat valorile generate:  ", K, iv)
+
 A_discussion(iv)
