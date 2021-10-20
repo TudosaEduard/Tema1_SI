@@ -42,7 +42,7 @@ Explicatii referitoare la comunicarea intre noduri si rezolvarea cerintei:
    * Preia cheia K si vectorul de initializare IV de la nodul Generator
    * Trimite mesaj catre MC pentru a cere una din cheile k1 sau k2(in functie de modul de operare dorit)
    * Decripteaza cheia preluata de la nodul MC
-   * Cripteaza mesajul cu cheia decriptata si eventual vectorul de initializare(in functie de modul de operare dorit)
+   * Cripteaza mesajul(pe blocuri de cate 128 biti) cu cheia decriptata si eventual vectorul de initializare(in functie de modul de operare dorit)
    * Specifica nodului B modul de operare in care va fi criptat mesajul
    * Dupa confirmarea comunicarii de catre nodul B, trimitem mesajul criptat lui B <br />
  * Nodul B:
@@ -52,7 +52,7 @@ Explicatii referitoare la comunicarea intre noduri si rezolvarea cerintei:
    * Decripteaza cheia preluata de la nodul MC
    * Confirma nodului A ca poate primi mesajul
    * Preia de la nodul A mesajul criptat
-   * Decripteaza mesajul cu cheia decriptata si eventual vectorul de initializare(in functie de modul de operare dorit de nodul A)
+   * Decripteaza mesajul(pe blocuri de cate 128 biti) cu cheia decriptata si eventual vectorul de initializare(in functie de modul de operare dorit de nodul A)
 
 ## Modul de comunicare intre noduri
 
