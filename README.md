@@ -24,4 +24,6 @@ Astfel se vor evita erorile de instalare a pachetelor Crypto si AES necesare.
 
 ## Modul de rezolvare a temei
 
-Cerinta problemei: [tema_1_SI.pdf](https://github.com/TudosaEduard/Tema1_SI/files/7379311/tema_1_SI.pdf)
+Cerinta problemei: [tema_1_SI .pdf](https://github.com/TudosaEduard/Tema1_SI/files/7379324/tema_1_SI.pdf)
+
+
