@@ -56,4 +56,15 @@ Explicatii referitoare la comunicarea intre noduri si rezolvarea cerintei:
 
 ## Modul de comunicare intre noduri
 
+Comunicarea se realizeaza in retea.
 
+Ordinea de rulare a nodurilor este: Generator.py, MC.py, A.py, B.py
+
+A se observa comunicarea intre noduri in consola.
+
+## Teste efectuate si observatii
+
+In urma testelor efectuate, am observat faptul ca algoritmii de criptarile/decriptarile din libraria PyCryptodome au oferit ceea ce trebuia. <br />
+Rezultatele de criptare/decriptare pot fi observate in console la rularea nodurilor. <br />
+De precizat faptul ca au fost probleme in ceea ce priveste padding-ul, rezolvate ulterior cu ajutorul instructiunilor pad,unpad din pachetul Crypto <br />
+Rezultatul a fost verificat in urma potrivirilor de text din fisierele mesaj.txt si mesaj_decriptat.txt.
